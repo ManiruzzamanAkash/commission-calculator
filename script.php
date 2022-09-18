@@ -53,7 +53,7 @@ try {
     // Process transaction
     $transaction = new Transaction($transactionItems);
     $transaction->processBulk();
-    echo implode("\r\n", $transaction->responses);
+    echo implode('\r\n', $transaction->responses);
 } catch (\Exception $e) {
-    echo "Please give a valid file name. File does not exists.";
+    echo 'Something went wrong processing. Error: ' . $e->getMessage();
 }

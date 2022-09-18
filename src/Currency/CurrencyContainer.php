@@ -54,8 +54,10 @@ class CurrencyContainer
      */
     public function get(string $currencyName): Currency
     {
+        $currencyName = trim($currencyName);
+
         if (empty($this->currencies[$currencyName])) {
-            throw new Exception('No currency found by this name.', 400);
+            throw new Exception('No currency found by this name - '.$currencyName, 400);
         }
 
         return $this->currencies[$currencyName];
