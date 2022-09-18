@@ -29,7 +29,7 @@ class Conversion
      * @param Currency $from From currency needs to convert
      * @param Currency $to   Converted to this currency
      */
-    public function __construct(Currency $from, ?Currency $to = null)
+    public function __construct(Currency $from, Currency $to)
     {
         $this->from = $from;
         $this->to = $to;

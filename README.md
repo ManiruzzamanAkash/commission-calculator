@@ -4,7 +4,7 @@ A simple commission calculator for transaction - `Withdraw`, `Deposit` using `PH
 ---
 
 ## Requirements
- - PHP 8.0
+ - PHP >= 8.0
 ## How to start
 
 ### Clone the repository

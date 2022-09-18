@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\CommissionTask\Currency;
 
 use App\CommissionTask\Traits\SingletonTrait;
+use Exception;
 
 /**
  * Currency Container class.
@@ -47,11 +48,17 @@ class CurrencyContainer
      *
      * @param string $currencyName Passed currency
      *
-     * @return Currency|null Currency
+     * @return Currency Currency
+     *
+     * @throws Exception
      */
-    public function get(string $currencyName): ?Currency
+    public function get(string $currencyName): Currency
     {
-        return $this->currencies[$currencyName] ? $this->currencies[$currencyName] : null;
+        if (empty($this->currencies[$currencyName])) {
+            throw new Exception('No currency found by this name.', 400);
+        }
+
+        return $this->currencies[$currencyName];
     }
 
     /**
