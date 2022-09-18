@@ -53,7 +53,9 @@ try {
     // Process transaction
     $transaction = new Transaction($transactionItems);
     $transaction->processBulk();
-    echo implode('\r\n', $transaction->responses);
+    echo "\n";
+    echo implode("\r\n", $transaction->responses);
+    echo "\n";
 } catch (\Exception $e) {
     echo 'Something went wrong processing. Error: ' . $e->getMessage();
 }
