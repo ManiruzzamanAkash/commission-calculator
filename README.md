@@ -25,7 +25,7 @@ composer install
 ```
 
 ### PHPUnit Test
-I've added total `29 tests`, and `33 assertions` for testing codebase.
+I've added total `33 tests`, and `37 assertions` for testing codebase.
 ```sh
 composer run phpunit
 ```
