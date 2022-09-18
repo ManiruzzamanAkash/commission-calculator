@@ -10,7 +10,7 @@ A simple commission calculator for transaction - `Withdraw`, `Deposit` using `PH
 ### Clone the repository
 
 ```sh
-git clone xxx
+git clone https://github.com/ManiruzzamanAkash/commission-calculator.git
 ```
 
 ### Go to that folder
